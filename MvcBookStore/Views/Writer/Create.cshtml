@@ -1,0 +1,36 @@
+﻿@model MvcBookStore.Models.writer
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>writer</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Writer)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Writer)
+            @Html.ValidationMessageFor(model => model.Writer)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+@*I could not pass a IEnumerable type data with model binding thats why i used viewbag to display list, 
+viewbag holds list type data and easily passes through controller without disturbing content model data type used to create above.*@
+@Html.Partial("_WriterView",(IEnumerable<MvcBookStore.Models.writer>)@ViewBag.writers)
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

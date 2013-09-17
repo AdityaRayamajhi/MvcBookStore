@@ -1,0 +1,211 @@
+﻿
+/*body {
+    background-color: #FFFFFF;
+}*/
+#header {
+    background: none repeat scroll 0 0 #65AD06;
+    border: 1px solid;
+    height: 100px;
+    width: 100%;
+}
+#menuwrapper {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+}
+#menu {
+    height: 120px;
+}
+#menu a {
+    background-color: #76C3CC;
+    float: left;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding: 20px;
+    text-decoration: none;
+}
+#menu li {
+    background: none repeat scroll 0 0 #0094FF;
+    float: left;
+    list-style-type: none;
+    margin: 5px 2px 2px;
+    width: 100px;
+}
+#menu li:hover {
+    background: none repeat scroll 0 0 #FFD800;
+    display: block;
+    float: left;
+    list-style-type: none;
+    margin: 5px 2px 2px;
+    width: 100px;
+}
+
+
+#bodywrapper {
+    
+    margin: 5px 0 0;
+}
+
+#footer {
+    background-color: #222930;
+    height: 50px;
+    width: 100%;
+}
+li {
+    border-bottom: 1px solid #808080;
+    list-style: none outside none;
+    padding: 10px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+#Text {
+    height: 50px;
+    margin-left: 37%;
+    margin-top: 0.9cm;
+    width: 28%;
+}
+
+#right {
+    background: none repeat scroll 0 0 #B0B0B0;
+    border: 5px inset #B2B9C0;
+    float: right;
+    height: auto;
+    margin: 0 0 0 20px;
+    min-height: 400px;
+    width: 70%;
+}
+#gallery {
+    display: inline-block;
+    float: left;
+    height: auto;
+    margin: 10px 3px 10px;
+    width: auto;
+}
+.gallery ul li a {
+    display: block;
+    float: right;
+}
+.gallery ul li {
+    background: none repeat scroll 0 0 white;
+    display: block;
+    float: right;
+    height: 150px;
+    list-style-type: none;
+    margin: 10px 5px 20px;
+    width: 150px;
+}
+.gallery ul li:hover {
+    background: none repeat scroll 0 0 #FCD271;
+    display: block;
+    float: right;
+    height: 150px;
+    list-style-type: none;
+    margin: 10px 5px 20px;
+    width: 150px;
+}
+.pageLink {
+    float: right;
+    font-size: 12px;
+    margin: 0 0 0 5px;
+}
+.gallery #writer {
+    margin: 80px 0 2px 5px;
+    width: 146px;
+}
+.gallery #genre {
+    float: right;
+    margin: 2px 0 2px 5px;
+    width: 146px;
+}
+.gallery #bookName {
+    background: none repeat scroll 0 0 #0094FF;
+    color: #FFFFFF;
+    font-size: 18px;
+    height: 30px;
+    margin: 2px;
+    padding: 0 0 0 5px;
+    width: 141px;
+}
+
+
+#left {
+    background: none repeat scroll 0 0 #ACD1E9;
+    float: left;
+    height: auto;
+    min-height: 400px;
+    width: 25%;
+}
+#left li {
+    background: none repeat scroll 0 0 #0094FF;    
+    list-style-type: none;
+    margin: 5px 2px;
+}
+#left li a {
+    display: block;
+    height: 30px;
+    text-decoration:none;
+}
+ #left li:hover {
+        background: none repeat scroll 0 0 #F78D3F;
+        display: block;
+        height: 30px;
+        list-style-type: none;
+        margin: 5px 2px;
+    }
+
+#ViewWrapper {
+     background: none repeat scroll 0 0 #B0B0B0;
+    border: 5px inset #B2B9C0;   
+    height: auto;
+    margin: auto;
+    width: 100%;
+}
+
+#ViewLeft {
+    width: 22%;
+    float : left;
+}
+
+#ViewRight {
+    float: right;
+    width: 70%;
+}
+
+
+.ViewBody {
+    background-color: #FFFFFF;
+    border: 2px groove;
+    display: block;   
+    min-height: 200px;  
+}
+
+#price {
+    float:left;
+    width:30%;
+}
+
+#cart {
+    float: right;
+    font-family: caption;
+    font-style:italic;
+    font-size: 12px;
+    width: 50%;
+}
+
+p2 {
+    font-size:20px;
+    font-style:italic;
+    color:red;
+    margin:0 0 0 10px;
+}
+
+.zee {
+     height: inherit;
+
+}
+
+.float-right {
+    float: right;
+}

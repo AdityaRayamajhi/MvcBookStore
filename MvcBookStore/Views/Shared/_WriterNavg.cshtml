@@ -1,0 +1,34 @@
+﻿@model IEnumerable<MvcBookStore.Models.writer>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+          $("#btnWriter").click(function () {
+              $("#writerlist").slideToggle();
+         });
+    });
+</script>
+
+ <body>
+     <div id="writer">
+    <input type="button" value="Writer" id="btnWriter"/><br/>
+    </div>
+</body>    
+     @* <h4>@MvcBookStore.Views.Home.HomeResource.menu3 </h4>*@
+
+    <div id="writerlist">
+@foreach (var item in Model) {
+   
+    
+     <ul>        
+         <li>   @Ajax.ActionLink(item.Writer, "Writershow",
+                    new { id = item.WriterId },
+                    new AjaxOptions
+                        {
+                          HttpMethod = "POST",
+                          UpdateTargetId = "right",
+                          InsertionMode = InsertionMode.Replace 
+                         }) </li>
+                      
+       </ul>    
+}
+</div>

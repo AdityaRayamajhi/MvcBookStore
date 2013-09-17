@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>   
+    @Styles.Render("~/bundles/css")
+    @Scripts.Render("~/bundles/js")   
+</head>
+    <body>
+<div id="header">
+    
+<div id="Text"> <h2>@MvcBookStore.Views.Home.HomeResource.ShopName | Admin Section </h2> </div> 
+   
+ </div>
+                     <p2>Limited Access </p2></> 
+<div id="menuwrapper">
+    <ul id="menu">
+ <li>@Html.ActionLink(@MvcBookStore.Views.Home.HomeResource.menu1,"Index","Home")</li>
+<li>@Html.ActionLink(@MvcBookStore.Views.Home.HomeResource.menu2,"Index","Genre")</li>
+<li>@Html.ActionLink(@MvcBookStore.Views.Home.HomeResource.menu3,"Index","Writer")</li>
+ <li>@Html.ActionLink(@MvcBookStore.Views.Home.HomeResource.menu4,"Index","Book")</li>
+    </ul>
+</div>  
+
+   <div id="bodywrapper">
+        @RenderBody()
+    </div>
+</body>
+</html>

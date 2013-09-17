@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MvcBookStore.Models.genreModel>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('#btnGenre').click(function () {
+        $('#genrelist').slideToggle();
+              });
+    });
+</script>
+
+  
+ <body>
+    
+<input type="button" value="Genre" id="btnGenre"/><br/>
+    
+</body>
+                
+
+ <div id ="genrelist">
+     
+@foreach (var item in Model) {
+    <ul>        
+         <li>   @Ajax.ActionLink(item.Genre, "Genshow",
+                    new { id = item.GenreId },
+                    new AjaxOptions
+                        {
+                          HttpMethod = "POST",
+                          UpdateTargetId = "right",
+                          InsertionMode = InsertionMode.Replace                          
+                         }) </li>
+                      
+       </ul>    
+}
+      
+</div>

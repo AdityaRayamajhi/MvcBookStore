@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MvcBookStore.Models.Book>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form method="get">
+
+    <input type ="search" name="SearchTerm" />
+    <input type="submit" value="Search" />
+
+</form>
+<header>
+    <meta name="google-translate-customization" content="b31ba103ec8fd30b-9c5ddff97e08b0f3-g4895c1ea67d3f287-f"></meta>
+</header>
+
+ <div id="left">
+            @Html.Partial("_GenNavg",new MvcBookStore.Models.BSEntity().genres.ToList())
+     <br />
+            @Html.Partial("_WriterNavg",new MvcBookStore.Models.BSEntity().writers.ToList())
+ </div>
+
+ @*   ..can navegate genre list through viewBag too ...
+<div id="leftside">
+    @Html.Partial("_GenNavg", (IEnumerable<MvcBookStore.Models.genreModel>)@ViewBag.genres) 
+</div>*@
+
+<div id="right">
+
+ @*From here we pass the items below to render body*@
+@foreach (var item in Model)
+{
+   <div id="gallery">
+       <div class="gallery">
+                                     @* passing imagepath dynamically.......... *@
+         <img src="@Url.Content(string.Format("/Images/{0}.jpg", item.ImagePath))" alt="No Pic Available" width="160" height="180">
+      
+         <h2>@Html.Truncate(item.BookName,14)</h2>
+          @Ajax.ActionLink("Show Details", "_Details", new { id = item.BookId },new AjaxOptions{ HttpMethod = "Get", UpdateTargetId = "bodywrapper", InsertionMode = InsertionMode.Replace},null)
+       </div>
+   </div>
+}
+</div>
+
+
+@*There was a Problem with the ajax call, iteration of confirm message ,which i removed by rendering partial view and deleting unobtruisve java sciprt to run twice.*@

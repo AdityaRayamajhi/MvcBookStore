@@ -1,0 +1,69 @@
+﻿@model MvcBookStore.Models.Book
+
+<script src="~/Scripts/jquery-ui-1.8.14.custom.min.js"></script>
+<script src="~/Scripts/zeeScroll.js"></script>
+<script type="text/javascript"></script>
+
+<link href="~/CSS_contents/main.css" rel="stylesheet" />
+
+@*<script type="text/javascript">
+    $('.zee').zeeScroll();
+        </script>*@
+
+
+<div id="ViewWrapper">
+
+ <fieldset>
+
+     <legend>@Html.DisplayFor(model => model.Genre.Genre)</legend>
+
+ <div id="ViewLeft">
+        <div>
+            <img src="@Url.Content(string.Format("/Images/{0}.jpg",Model.ImagePath))" alt="No Pic Available" width="250" height="280" />
+        </div>
+
+            <h3>        
+                @Html.DisplayNameFor(model => model.BookName) :
+                @Html.DisplayFor(model => model.BookName) 
+            </h3>
+      <div id="price"> 
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Price) =
+             @Html.DisplayFor(model => model.Price)
+        </div>
+      </div>
+
+      <div id="cart">
+          @Html.ActionLink("Buy This Book", "")
+          <img src="~/Images/cart.jpg" alt="No Pic Available" width="50" height="50" />
+      </div>  
+    
+ </div>  
+        
+  <div id="ViewRight">
+
+        <div class="display-field">
+            @Html.DisplayNameFor(model => model.WriterId) : @Html.DisplayFor(model => model.Writer.WriterId) : @Html.DisplayFor(model => model.Writer.Writer)
+        </div>
+       
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.ABOUT) 
+        </div>
+
+    
+          <div class ="zee">
+                <div class="ViewBody">             
+                    @Html.DisplayFor(model => model.ABOUT)
+                </div>
+          </div> 
+  </div>      
+</fieldset>
+
+        
+
+<p>
+    @Html.ActionLink("Back to All Lists", "Index")
+</p>
+
+
+    </div>

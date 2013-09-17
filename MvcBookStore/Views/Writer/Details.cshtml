@@ -1,0 +1,22 @@
+﻿@model MvcBookStore.Models.writer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>writer</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Writer)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Writer)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.WriterId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

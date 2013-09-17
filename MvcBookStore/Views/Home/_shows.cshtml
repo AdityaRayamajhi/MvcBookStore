@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MvcBookStore.Models.Book>
+
+@{
+    Layout = null;
+}
+   
+  
+<fieldset>
+    <legend><p2>@ViewBag.Wise</p2></legend>
+@foreach (var item in Model) 
+{
+    <div id="gallery">
+     
+             <div class="gallery">
+                                    @* passing imagepath dynamically.......... *@
+                <img src="@Url.Content(string.Format("/Images/{0}.jpg", item.ImagePath))" alt="No Pic Available" width="160" height="180">
+      
+                <h2>@Html.Truncate(item.BookName,14)</h2>
+
+                @Ajax.ActionLink("Show Details", "_Details", new { id = item.BookId },new AjaxOptions{ HttpMethod = "Get", UpdateTargetId = "bodywrapper", InsertionMode = InsertionMode.Replace}, null)
+            </div>
+    </div>
+    
+ }  
+  </fieldset>  
+<p>
+    @Html.ActionLink("Back To All Lists", "Index") 
+
+</p>
+    

@@ -1,0 +1,6 @@
+Entity Framework:
+		Model:
+		      Database table
+		      Validation(model)
+
+---E.F---- using package manager console.

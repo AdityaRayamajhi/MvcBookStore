@@ -1,0 +1,34 @@
+﻿@model IEnumerable<MvcBookStore.Models.writer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Writer | Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Writer)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Writer)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.WriterId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.WriterId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.WriterId })
+        </td>
+    </tr>
+}
+
+</table>

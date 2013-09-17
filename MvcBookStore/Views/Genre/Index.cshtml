@@ -1,0 +1,42 @@
+﻿@*Because Im using a custom made Html helper using reference to it.....*@
+
+@*@using MvcBookStore.Infrastructure;*@
+
+
+@model IEnumerable<MvcBookStore.Models.genreModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Genre | @ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.Truncate(item.Genre,10)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.GenreId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.GenreId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.GenreId })
+        </td>
+    </tr>
+}
+
+</table>
+
+
+

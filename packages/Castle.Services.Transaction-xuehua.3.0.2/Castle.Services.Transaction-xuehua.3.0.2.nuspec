@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Castle.Services.Transaction-xuehua</id>
+    <version>3.0.2</version>
+    <title>Castle Transaction Services</title>
+    <authors>Henrik Feldt,  Hamilton Verissimo</authors>
+    <owners>Henrik Feldt,  Hamilton Verissimo</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Castle Transaction Framework, you can access the below url to find the source code.
+         https://github.com/tangxuehua/Castle.Services.Transaction</description>
+    <copyright>2012</copyright>
+    <language>zh-CN</language>
+    <dependencies>
+      <dependency id="Castle.Core" version="3.1.0" />
+      <dependency id="Castle.Windsor" version="3.1.0" />
+      <dependency id="log4net" version="1.2.10" />
+    </dependencies>
+    <references>
+      <reference file="Castle.Services.Transaction.dll" />
+    </references>
+  </metadata>
+</package>
